@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>NacoBoxPvP</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -16,70 +16,74 @@ color:white;
 }
 
 header{
-background:linear-gradient(90deg,#6a00ff,#a200ff);
-padding:20px;
-text-align:center;
-font-size:35px;
-font-weight:600;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 40px;
+background:#0b0b0b;
 }
 
-nav{
-background:#1b1b1b;
-text-align:center;
-padding:15px;
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+font-size:22px;
+font-weight:bold;
 }
 
 nav a{
+margin:0 15px;
 color:white;
-margin:15px;
 text-decoration:none;
-font-size:18px;
+font-size:16px;
 }
 
 .hero{
-text-align:center;
-padding:120px 20px;
-background:url("https://wallpapercave.com/wp/wp2757874.gif");
+height:80vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+padding-left:80px;
+background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.8)),
+url("https://images.hdqwalls.com/download/minecraft-nether-update-4k-0p-1920x1080.jpg");
 background-size:cover;
 }
 
 .hero h1{
-font-size:50px;
+font-size:60px;
+}
+
+.hero p{
+font-size:20px;
 }
 
 .button{
-background:#8b00ff;
-padding:15px 30px;
-border-radius:10px;
+background:#ff7a00;
+padding:15px 35px;
+border-radius:12px;
 text-decoration:none;
 color:white;
+font-weight:bold;
 font-size:18px;
 }
 
 .section{
-padding:80px 20px;
+padding:80px;
 text-align:center;
 }
 
 .card{
-background:#1c1c1c;
+background:#1a1a1a;
+padding:30px;
+border-radius:12px;
 max-width:600px;
 margin:auto;
-padding:25px;
-border-radius:10px;
-margin-top:20px;
-}
-
-.copy{
-cursor:pointer;
-color:#00ffd5;
 }
 
 footer{
-background:#111;
+background:#0b0b0b;
+padding:30px;
 text-align:center;
-padding:25px;
-margin-top:50px;
 }
 
 </style>
@@ -88,103 +92,71 @@ margin-top:50px;
 <body>
 
 <header>
+
+<div class="logo">
+
+<img src="https://cdn-icons-png.flaticon.com/512/2111/2111370.png" width="35">
+
 NacoBoxPvP
-</header>
+
+</div>
 
 <nav>
-<a href="#anasayfa">Ana Sayfa</a>
-<a href="#kurallar">Kurallar</a>
-<a href="#market">Market</a>
-<a href="#destek">Destek</a>
+
+<a href="#">Ana Sayfa</a>
+<a href="#">Mağaza</a>
+<a href="#">Yardım</a>
+<a href="#">Kredi Satın Al</a>
+<a href="#">Kredi Gönder</a>
+<a href="#">Hile Kontrol</a>
+
 </nav>
 
-<section class="hero" id="anasayfa">
+<div>
 
-<h1>NacoBoxPvP</h1>
+<img src="https://mc-heads.net/avatar/SMD_Samet/40">
 
-<p>1.20.1 - 1.21.1 BoxPvP Sunucusu</p>
+</div>
 
-<p class="copy" onclick="copyIP()">IP: NacoBoxPvP.aternos.me (Kopyala)</p>
+</header>
 
-<p id="players">Oyuncular yükleniyor...</p>
+<section class="hero">
+
+<h1>1 Numaralı Minecraft Sunucusuna Katılın!</h1>
+
+<p>NacoBoxPvP ücretsiz bir BoxPvP sunucusudur.</p>
 
 <br>
 
-<a class="button" href="https://discord.gg/mHc3MS9V4h">Discord'a Katıl</a>
+<a class="button" href="https://discord.gg/mHc3MS9V4h">
+
+Şimdi Oyna
+
+</a>
 
 </section>
 
-<section class="section" id="kurallar">
+<section class="section">
 
-<h2>Sunucu Kuralları</h2>
-
-<div class="card">
-✔ Hile kullanmak yasaktır<br><br>
-✔ Küfür etmek yasaktır<br><br>
-✔ Bug kullanmak yasaktır<br><br>
-✔ Yetkililere saygı zorunludur
-</div>
-
-</section>
-
-<section class="section" id="market">
-
-<h2>VIP Market</h2>
+<h2>Sunucu Hakkında</h2>
 
 <div class="card">
 
-VIP — Discord'dan satın alın<br><br>
+Sürüm: 1.20.1 - 1.21.11<br><br>
 
-VIP+ — Discord'dan satın alın<br><br>
+IP: NacoBoxPvP.aternos.me<br><br>
 
-MVP — Discord'dan satın alın
-
-</div>
-
-</section>
-
-<section class="section" id="destek">
-
-<h2>Destek</h2>
-
-<div class="card">
-
-Sorun mu var?<br><br>
-
-Discord sunucumuza gelip destek ticket açabilirsiniz.
-
-<br><br>
-
-<a class="button" href="https://discord.gg/mHc3MS9V4h">Discord</a>
+Discord üzerinden destek alabilirsiniz.
 
 </div>
 
 </section>
 
 <footer>
+
 © 2026 NacoBoxPvP
+
 </footer>
-
-<script>
-
-function copyIP(){
-navigator.clipboard.writeText("NacoBoxPvP.aternos.me")
-alert("IP kopyalandı!")
-}
-
-fetch("https://api.mcsrvstat.us/2/NacoBoxPvP.aternos.me")
-.then(res=>res.json())
-.then(data=>{
-if(data.online){
-document.getElementById("players").innerText =
-"Aktif Oyuncular: "+data.players.online
-}else{
-document.getElementById("players").innerText =
-"Sunucu şu anda kapalı"
-}
-})
-
-</script>
 
 </body>
 </html>
