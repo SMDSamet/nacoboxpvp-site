@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>Mağaza</title>
+
+<style>
+body{font-family:Arial;background:#111;color:white;text-align:center}
+
+.card{
+background:#1b1b1b;
+padding:30px;
+margin:30px auto;
+width:300px;
+border-radius:10px;
+}
+
+.yakinda{
+color:#ff7a00;
+font-weight:bold;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>NacoBoxPvP Mağaza</h1>
+
+<div class="card">
+<h2>VIP</h2>
+<p class="yakinda">(YAKINDA)</p>
+</div>
+
+<div class="card">
+<h2>VIP+</h2>
+<p class="yakinda">(YAKINDA)</p>
+</div>
+
+</body>
+</html>
