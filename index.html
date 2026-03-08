@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>NacoBoxPvP</title>
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background:#0f0f0f;
+color:white;
+text-align:center;
+}
+
+header{
+background:linear-gradient(90deg,#6a00ff,#a200ff);
+padding:20px;
+font-size:30px;
+font-weight:bold;
+}
+
+nav{
+background:#1a1a1a;
+padding:15px;
+}
+
+nav a{
+color:white;
+margin:15px;
+text-decoration:none;
+font-size:18px;
+}
+
+.hero{
+padding:100px 20px;
+}
+
+.button{
+background:#8b00ff;
+padding:15px 30px;
+border-radius:10px;
+text-decoration:none;
+color:white;
+font-size:18px;
+}
+
+.section{
+padding:60px;
+}
+
+.card{
+background:#1b1b1b;
+margin:20px auto;
+padding:25px;
+border-radius:10px;
+max-width:600px;
+}
+
+.copy{
+cursor:pointer;
+color:#00ffd5;
+}
+
+footer{
+background:#111;
+padding:20px;
+margin-top:40px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+NacoBoxPvP
+</header>
+
+<nav>
+<a href="#ana">Ana Sayfa</a>
+<a href="#kurallar">Kurallar</a>
+<a href="#market">Market</a>
+<a href="#discord">Discord</a>
+</nav>
+
+<section class="hero" id="ana">
+
+<h1>Türkiye'nin En İyi BoxPvP Sunucusu</h1>
+
+<p>1.20.1 - 1.21.1 destekli</p>
+
+<p class="copy" onclick="copyIP()">IP: NacoBoxPvP.aternos.me (kopyala)</p>
+
+<p id="players">Oyuncular yükleniyor...</p>
+
+<br>
+
+<a class="button" href="https://discord.gg/mHc3MS9V4h">Discord'a Katıl</a>
+
+</section>
+
+<section class="section" id="kurallar">
+
+<h2>Kurallar</h2>
+
+<div class="card">
+1. Küfür yasaktır<br>
+2. Hile yasaktır<br>
+3. Yetkililere saygı<br>
+4. Bug kullanımı yasak
+</div>
+
+</section>
+
+<section class="section" id="market">
+
+<h2>VIP Market</h2>
+
+<div class="card">
+VIP satın almak için Discord üzerinden destek açabilirsiniz.
+</div>
+
+</section>
+
+<section class="section" id="discord">
+
+<h2>Discord</h2>
+
+<div class="card">
+Sunucumuzun Discord'una katılarak etkinliklerden haberdar olun.
+<br><br>
+<a class="button" href="https://discord.gg/mHc3MS9V4h">Discord</a>
+</div>
+
+</section>
+
+<footer>
+© 2026 NacoBoxPvP
+</footer>
+
+<script>
+
+function copyIP(){
+navigator.clipboard.writeText("NacoBoxPvP.aternos.me")
+alert("IP kopyalandı!")
+}
+
+fetch("https://api.mcsrvstat.us/2/NacoBoxPvP.aternos.me")
+.then(res=>res.json())
+.then(data=>{
+if(data.online){
+document.getElementById("players").innerText =
+"Aktif Oyuncular: "+data.players.online
+}
+})
+
+</script>
+
+</body>
+</html>
