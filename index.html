@@ -3,25 +3,29 @@
 <head>
 <meta charset="UTF-8">
 <title>NacoBoxPvP</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+
 <style>
 
 body{
 margin:0;
-font-family:Arial;
+font-family:Poppins;
 background:#0f0f0f;
 color:white;
-text-align:center;
 }
 
 header{
 background:linear-gradient(90deg,#6a00ff,#a200ff);
 padding:20px;
-font-size:30px;
-font-weight:bold;
+text-align:center;
+font-size:35px;
+font-weight:600;
 }
 
 nav{
-background:#1a1a1a;
+background:#1b1b1b;
+text-align:center;
 padding:15px;
 }
 
@@ -33,7 +37,14 @@ font-size:18px;
 }
 
 .hero{
-padding:100px 20px;
+text-align:center;
+padding:120px 20px;
+background:url("https://wallpapercave.com/wp/wp2757874.gif");
+background-size:cover;
+}
+
+.hero h1{
+font-size:50px;
 }
 
 .button{
@@ -46,15 +57,17 @@ font-size:18px;
 }
 
 .section{
-padding:60px;
+padding:80px 20px;
+text-align:center;
 }
 
 .card{
-background:#1b1b1b;
-margin:20px auto;
+background:#1c1c1c;
+max-width:600px;
+margin:auto;
 padding:25px;
 border-radius:10px;
-max-width:600px;
+margin-top:20px;
 }
 
 .copy{
@@ -64,8 +77,9 @@ color:#00ffd5;
 
 footer{
 background:#111;
-padding:20px;
-margin-top:40px;
+text-align:center;
+padding:25px;
+margin-top:50px;
 }
 
 </style>
@@ -78,19 +92,19 @@ NacoBoxPvP
 </header>
 
 <nav>
-<a href="#ana">Ana Sayfa</a>
+<a href="#anasayfa">Ana Sayfa</a>
 <a href="#kurallar">Kurallar</a>
 <a href="#market">Market</a>
-<a href="#discord">Discord</a>
+<a href="#destek">Destek</a>
 </nav>
 
-<section class="hero" id="ana">
+<section class="hero" id="anasayfa">
 
-<h1>Türkiye'nin En İyi BoxPvP Sunucusu</h1>
+<h1>NacoBoxPvP</h1>
 
-<p>1.20.1 - 1.21.1 destekli</p>
+<p>1.20.1 - 1.21.1 BoxPvP Sunucusu</p>
 
-<p class="copy" onclick="copyIP()">IP: NacoBoxPvP.aternos.me (kopyala)</p>
+<p class="copy" onclick="copyIP()">IP: NacoBoxPvP.aternos.me (Kopyala)</p>
 
 <p id="players">Oyuncular yükleniyor...</p>
 
@@ -102,13 +116,13 @@ NacoBoxPvP
 
 <section class="section" id="kurallar">
 
-<h2>Kurallar</h2>
+<h2>Sunucu Kuralları</h2>
 
 <div class="card">
-1. Küfür yasaktır<br>
-2. Hile yasaktır<br>
-3. Yetkililere saygı<br>
-4. Bug kullanımı yasak
+✔ Hile kullanmak yasaktır<br><br>
+✔ Küfür etmek yasaktır<br><br>
+✔ Bug kullanmak yasaktır<br><br>
+✔ Yetkililere saygı zorunludur
 </div>
 
 </section>
@@ -118,19 +132,31 @@ NacoBoxPvP
 <h2>VIP Market</h2>
 
 <div class="card">
-VIP satın almak için Discord üzerinden destek açabilirsiniz.
+
+VIP — Discord'dan satın alın<br><br>
+
+VIP+ — Discord'dan satın alın<br><br>
+
+MVP — Discord'dan satın alın
+
 </div>
 
 </section>
 
-<section class="section" id="discord">
+<section class="section" id="destek">
 
-<h2>Discord</h2>
+<h2>Destek</h2>
 
 <div class="card">
-Sunucumuzun Discord'una katılarak etkinliklerden haberdar olun.
+
+Sorun mu var?<br><br>
+
+Discord sunucumuza gelip destek ticket açabilirsiniz.
+
 <br><br>
+
 <a class="button" href="https://discord.gg/mHc3MS9V4h">Discord</a>
+
 </div>
 
 </section>
@@ -152,6 +178,9 @@ fetch("https://api.mcsrvstat.us/2/NacoBoxPvP.aternos.me")
 if(data.online){
 document.getElementById("players").innerText =
 "Aktif Oyuncular: "+data.players.online
+}else{
+document.getElementById("players").innerText =
+"Sunucu şu anda kapalı"
 }
 })
 
